@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -234,8 +235,6 @@
 			left:0;
 		}
 	</style>
-	<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -258,7 +257,7 @@
 			<button id="otShare">copy link</button>
 		</div>
 	</div>
-	<script>try{
+	<script>
 		var dictionary = {
 			en:{
 				me: "I",
@@ -481,32 +480,6 @@
 			}
 			return arr1;
 		}
-	}catch(e){alert(e);}
-	</script>
-	<script>try{
-		var isVisited = localStorage.getItem("mywebsitevst") || false;
-		var firebaseConfig = {
-	  		apiKey: "AIzaSyDe-YAiAEvOEhhJqLesdkUDYoGqoBGQONo",
-			authDomain: "name-39094.firebaseapp.com",
-		  	projectId: "name-39094",
- 		 	storageBucket: "name-39094.appspot.com",
- 		  	messagingSenderId: "710504339152",
- 		  	appId: "1:710504339152:web:30a30c78fea0223234b0d5"
- 		};
-		firebase.initializeApp(firebaseConfig);
-		
-		var db = firebase.database();
-	
-		db.ref("users/").set({
-			v:5
-		});
-		db.ref("/users").set({i:0})
-/*	var starCountRef = db.ref('/');
-	starCountRef.on('value', (snapshot) => {
-		const data = snapshot.val();
-		alert(data);
-	});*/
-		}catch(e){alert(e);}
 	</script>
 </body>
 </html>
